@@ -1,36 +1,39 @@
 # setting canvas
 import pygame
+import sys
 # https://www.pygame.org/docs/
 pygame.init()
-screen = pygame.display.set_mode((1280, 720))
+
+width, height = 800, 600
+screen = pygame.display.set_mode((width, height))
+pygame.display.set_caption("Penguin Patrol")
+
+# colours :)
+blue = (30, 144, 255)
+yellow = (238, 214, 175)
+grey = (80, 80, 80)
+green = (46, 139, 87)
+
 clock = pygame.time.Clock()
-running = True
-dt = 0
 running_fps = 60
 
-player_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
-
+running = True
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
     
-    screen.fill("yellow")
-
-    #game renderingg (this is their example in the pygame docs belokw)
-    pygame.draw.rect(screen, "blue", (player_pos.x - 50, player_pos.y - 50, 100, 100))
-
-    keys = pygame.key.get_pressed()
-    if keys[pygame.K_w]:
-        player_pos.y -= 300 *dt
-    if keys[pygame.K_s]:
-        player_pos.y += 300 *dt
-    if keys[pygame.K_a]:
-        player_pos.x -= 300 *dt
-    if keys[pygame.K_d]:
-        player_pos.x += 300 *dt
+    #ocean
+    pygame.draw.rect(screen, blue, (0, 450, width, 150))
+    #beach
+    pygame.draw.rect(screen, yellow, (0, 250, width, 200))
+    #road
+    pygame.draw.rect(screen, grey, (0, 150, width, 100))
+    #dune/penguin burrow things
+    pygame.draw.rect(screen, green, (0, 0, width, 150))
 
     pygame.display.flip()
-    dt= clock.tick(running_fps) / 1000 # this is the fps, maybe a settings menu where it can be adjusted??
+    clock.tick(running_fps)
 
 pygame.quit()
+sys.exit()
