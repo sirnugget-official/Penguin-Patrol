@@ -1,0 +1,4 @@
+## 🐧 Penguin Patrol
+Penguin Patrol is a singleplayer game where you manage a stretch of the North Western Coastline of Tasmania. Little Penguins (or Fairy Penguins) attempt to cross the beach to reach their burrows at dusk. You must strategically spend your resources and Eco-Credits to install penguin-safe fencing, deploy AI-activated "Slow Down" signs for passing vehicles, and send out "CoastCare Volunteers" to eradicate weeds and plant native grasses.
+
+Local penguin colonies in Tasmania face major threats from night time coastal traffic, off leash dogs, feral cats and habitat degradation due to invasive weeds. This game was created in Python via Pygame, and is dedicated to raising awareness for our penguin community.
