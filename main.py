@@ -1,6 +1,7 @@
 # setting canvas
 import pygame
 import sys
+import random
 # https://www.pygame.org/docs/
 pygame.init()
 
@@ -16,6 +17,15 @@ green = (46, 139, 87)
 
 clock = pygame.time.Clock()
 running_fps = 60
+
+# penguin class for sprites
+
+# vehicle class sprite things
+
+#fences 
+#colissions
+#just other stuff
+
 
 running = True
 while running:
